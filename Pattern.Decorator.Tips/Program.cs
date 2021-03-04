@@ -12,7 +12,7 @@ namespace Patterns.Decorator.Tips
         public static void InitializeObject()
         {
             _sender = new ExceptionDecorator(
-                new SuccessorSender(new SuccessorSender(new MailSender(), new TelegramSender()), new TelegramSender()));
+                new SuccessorSender(new SuccessorSender(new MailSender(), new TelegramSender()), new SmsSender()));
 
         }
         static void Main(string[] args)
